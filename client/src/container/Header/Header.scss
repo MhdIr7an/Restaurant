@@ -1,0 +1,19 @@
+@import '../../variables';
+
+.app__header {
+    background-color: $color-black;
+    
+    &-h1 {
+        font-family: $font-base;
+        color: $color-golden;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        line-height: 117px;
+        font-size: 90px;
+    }
+    
+    &_img img {
+        width: 80%;
+    }
+}
+

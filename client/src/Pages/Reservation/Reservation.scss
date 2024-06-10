@@ -1,0 +1,88 @@
+@import '../../variables';
+
+main {
+    background: url(../../assets/bg.png);
+    height: 100vh;
+}
+
+.reservation__form {
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    @media screen and (max-width: 800px) {
+        width: 19rem;
+    }
+
+    label {
+        margin-bottom: 1rem;
+        font-family: $font-base;
+        color: $color-white;
+
+        input, select {
+        width: 40rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid $color-golden;
+        background-color: transparent;
+        color: $color-white;
+        outline: none;
+
+        &::placeholder {
+            color: $color-white;
+        }
+
+        @media screen and (max-width: 767px) {
+            width: 19rem;
+        }
+        }
+
+        .error {
+        color: red;
+        font-size: 0.8rem;
+        margin-top: 0.2rem;
+        }
+
+        select > option {
+            background-color: black;
+        }
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        background-color: $color-golden;
+        color: $color-black;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $color-crimson;
+        }
+
+        &.disabled {
+            background-color: transparent;
+            color: red;
+            cursor: auto;
+            pointer-events: none;
+        }
+    }
+}
+
+.reservation__header {
+    font-family: $font-base;
+    color: $color-golden;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    line-height: 117px;
+    font-size: 60px;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
