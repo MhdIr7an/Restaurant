@@ -3,6 +3,11 @@
 main {
     background: url(../../assets/bg.png);
     height: 100vh;
+    
+    @media screen and (max-width: 500px) {
+        width: 26.5rem;
+        height: 90rem;
+    }
 }
 
 .reservation__form {
